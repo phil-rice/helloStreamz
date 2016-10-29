@@ -1,0 +1,13 @@
+.idea
+.idea_modules
+*.iml
+target
+project/target
+bruce-service/project/project/credentials.sbt
+.lib
+.DS_Store
+sbt
+.sbt-local
+.history
+application.conf
+.vagrant
