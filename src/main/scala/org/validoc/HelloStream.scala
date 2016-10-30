@@ -14,13 +14,6 @@ object HelloStream extends App {
 
   import StreamOps._
 
-  trait Document
-
-  case class ProductionId(raw: String) extends AnyVal
-
-  case class ThorData(raw: String) extends Document
-
-  case class MercuryData(raw: String) extends Document
 
   val productionIds: Process[Task, ProductionId] = io.linesR("data.txt").map(ProductionId(_))
   val loadFromThor = (id: ProductionId) => Future(ThorData(id.raw))
